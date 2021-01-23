@@ -18,27 +18,10 @@ namespace leave_management.Data.Migrations
                 table: "LeaveAllocations",
                 nullable: false,
                 defaultValue: 0);
-
-            migrationBuilder.CreateTable(
-                name: "LeaveTypeViewModel",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    DateCreated = table.Column<DateTime>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_LeaveTypeViewModel", x => x.Id);
-                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "LeaveTypeViewModel");
-
             migrationBuilder.DropColumn(
                 name: "DefaultDays",
                 table: "LeaveTypes");

@@ -10,9 +10,6 @@ namespace leave_management.Data.Migrations
             migrationBuilder.DropTable(
                 name: "LeaveHistories");
 
-            migrationBuilder.DropTable(
-                name: "LeaveTypeViewModel");
-
             migrationBuilder.CreateTable(
                 name: "LeaveRequests",
                 columns: table => new
@@ -108,20 +105,6 @@ namespace leave_management.Data.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "LeaveTypeViewModel",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_LeaveTypeViewModel", x => x.Id);
                 });
 
             migrationBuilder.CreateIndex(

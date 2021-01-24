@@ -20,10 +20,8 @@ Manage Packages with NuGet Manager
 
 Implement Website Layout using AdminLTE Theme
 
-Setup GitHub for Source Control
-
-Website: Trevoir Williams | Blog
 ------------------------------------
+
 To Configure For Local Use
 
 Clone Repository To Local Computer
